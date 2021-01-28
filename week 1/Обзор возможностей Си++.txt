@@ -1,0 +1,27 @@
+ВИДЕО HELLO WORLD
+
+#include <iostream>  /* библиотека для ввода и вывода */
+using namespace std;
+	int main () {
+	cout << "Hello, world!";
+	return 0;
+}
+Вывод: Hello, world!
+
+ВИДЕО ОБЗОР ТИПОВ
+
+Си++ язык со статической типизацией 
+(когда объявляем переменную обязательно нужно указать ее тип)  
+
+Типы без подключения библиотек 
+
+#include <iostream>
+using namespace std;
+int main(){
+    int x = 5; 
+    double pi = 3.14;
+    bool logical_value = false;
+    char symble = 'a';
+    cout << x << ' ' << pi << ' ' << logical_value << ' ' << symble;
+    return 0;
+}

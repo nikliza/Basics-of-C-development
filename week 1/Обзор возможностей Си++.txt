@@ -3,7 +3,7 @@
 #include <iostream>  /* библиотека для ввода и вывода */
 using namespace std;
 	int main () {
-	cout << "Hello, world!";
+	cout << "Hello, world!"; 
 	return 0;
 }
 Вывод: Hello, world!

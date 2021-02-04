@@ -1,0 +1,57 @@
+ВИДЕО: ВВЕДЕНИЕ В ФУНКЦИИ
+
+#include <iostream> 
+int Sum (int x, int y){
+	return x+ y;
+}
+using namespace std;
+	int main () {
+		int a,b;
+		cin >> a >> b;
+		cout << Sum (a,b);
+
+	return 0;
+}
+Ввод 3 4
+Вывод 7
+
+
+#include <iostream>  
+#include <vector>
+#include <string>
+using namespace std;
+
+bool Contains (vector<string> words, string w) {
+	for (auto c : words){
+		if (c == w){
+			return true;
+		}
+	}
+	return false;
+}
+
+	int main () {
+		cout << Contains({"air","water","fire"}, "water");
+	return 0;
+}
+Вывод: 1
+
+
+ВИДЕО: ПЕРЕДАЧА ПАРАМЕТРОВ ФУНКЦИЙ ПО ЗНАЧЕНИЮ
+
+#include <iostream>  /* библиотека для ввода и вывода */
+#include <vector>
+#include <string>
+using namespace std;
+
+void PrintWords (vector<string> words) {
+	for (auto c : words){
+		cout << c << " ";
+}
+}
+
+ int main () {
+		PrintWords({"air","water","fire","ran"});
+	return 0;
+}
+

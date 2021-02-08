@@ -1,0 +1,109 @@
+ВИДЕО: ВЕКТОР, ЧАСТЬ 1 / ВЕКТОР, ЧАСТЬ 2
+
+1 вариант заполнить вектор через консоль:
+
+#include <iostream>  /* библиотека для ввода и вывода */
+#include <vector>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+void PrintVector(vector<string>& v){
+    for (string s: v){
+        cout << s;
+    }
+}
+
+
+int main () {
+    int n;
+    cin >> n;
+    vector<string> v(n);
+    PrintVector(v);
+}
+
+
+2 вариант заполнить вектор через консоль:
+
+#include <iostream>  /* библиотека для ввода и вывода */
+#include <vector>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+void PrintVector(vector<string>& v){
+    for (string s: v){
+        cout << s;
+    }
+}
+
+
+int main () {
+    int n;
+    cin >> n;
+    vector<string> v;
+
+    int i = 0;
+    while (i < n) {
+        string s;
+        cin >> s;
+        v.push_back(s);
+        ++i;
+    }
+    PrintVector(v);
+}
+
+3 вариант:
+
+#include <iostream>  /* библиотека для ввода и вывода */
+#include <vector>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+void PrintVector(vector<string>& v){
+    for (string s: v){
+        cout << s;
+    }
+}
+
+
+int main () {
+    int n;
+    cin >> n;
+    vector<string> v;
+    
+    for (int i = 0; i < n; ++i) {
+        string s;
+        cin >> s;
+        v.push_back(s);
+    }
+    PrintVector(v);
+}
+
+Изменить размер и заполнить автоматически 
+#include <iostream>  /* библиотека для ввода и вывода */
+#include <vector>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+void PrintVector(vector<bool>& v){
+    int i = 0;
+    for (auto s: v){
+        cout<< i << " : " << s<< endl;
+        i++;
+    }
+}
+
+
+int main () {
+    vector<bool> v(29, false);
+    v.assign(31, true);
+    PrintVector(v);
+    cout << "hello";
+}

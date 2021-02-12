@@ -1,0 +1,147 @@
+ВИДЕО: СЛОВАРИ, ЧАСТЬ 1
+
+#include <iostream>  /* библиотека для ввода и вывода */
+#include <map>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+void PrintMap(map <int, string>& m){
+    cout <<"Size: " << m.size()<< endl;
+    for (auto even : m){
+        cout << even.first << " " << even.second << endl;
+    }
+}
+
+int main () {
+    map <int, string> events;
+    events[1995] = "one";
+    events[1999] = "two";
+    PrintMap(events);
+    cout << events[1999]<< endl;
+    events.erase(1999);
+    PrintMap(events);
+
+    return 0;
+}
+ Вывод:
+
+ Size: 2
+1995 one
+1999 two
+two
+Size: 1
+1995 one
+
+#include <iostream>  /* библиотека для ввода и вывода */
+#include <map>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+void PrintMap(map <int, string>& m){
+    cout <<"Size: " << m.size()<< endl;
+    for (auto even : m){
+        cout << even.first << " " << even.second << endl;
+    }
+}
+void PrintMapLiza(map <string, int>& m){
+    cout <<"Size: " << m.size()<< endl;
+    for (auto even : m){
+        cout << even.first << " " << even.second << endl;
+    }
+}
+map<string, int> Rev(map <int, string>& m){
+    map<string, int> rez;
+    for (auto s: m){
+    rez[s.second] = s.first;
+    }
+
+}
+int main () {
+    map <int, string> events;
+    events[1995] = "one";
+    events[1999] = "two";
+    PrintMap(events);
+    cout << events[1999]<< endl;
+    events.erase(1999);
+    PrintMap(events);
+    map<string,int> liza;
+    liza = Rev(events);
+    PrintMapLiza(liza);
+
+    return 0;
+}
+
+Вывод:
+Size: 2
+1995 one
+1999 two
+two
+Size: 1
+1995 one
+
+ВИДЕО: СЛОВАРИ, ЧАСТЬ 2
+
+#include <iostream>  /* библиотека для ввода и вывода */
+#include <map>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+void PrintMapLiza(map <string, int>& m){
+    cout <<"Size: " << m.size()<< endl;
+    for (const auto& even : m){
+        cout << even.first << " " << even.second << endl;
+    }
+}
+
+int main () {
+    vector<string> words = {"one", "two","one"};
+    map <string, int> counters;
+    for (const auto& word: words){
+        ++counters[word];
+    }
+    PrintMapLiza(counters);
+    return 0;
+}
+Вывод:
+Size: 2
+one 2
+two 1
+
+#include <iostream>  /* библиотека для ввода и вывода */
+#include <map>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+void PrintMapLiza(map <string, int>& m){
+    cout <<"Size: " << m.size()<< endl;
+    for (const auto& even : m){
+        cout << even.first << " " << even.second << endl;
+    }
+}
+
+int main () {
+    vector<string> words = {"one", "two","three"};
+    map <char, vector<string>> grouped_words;
+    for (const string& word: words){
+        grouped_words[word[0]].push_back(word);
+    }
+    for (const auto& item : grouped_words) {
+        cout << item.first << endl;
+        for (const string& word : item.second) {
+            cout << word << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+Вывод:
+o
+one
+t
+two three

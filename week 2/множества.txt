@@ -1,0 +1,79 @@
+ВИДЕО: МНОЖЕСТВА ЧАСТЬ 1
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <set>
+using namespace std;
+
+void PrintSet(const set<string>& s){
+    cout << "Size = " << s.size()<< endl;
+    for(auto& x : s){
+        cout << x<< endl;
+    }
+}
+
+int main() {
+    set <string> famost_person;
+    famost_person.insert("Pushkin");
+    famost_person.insert("Lermontov");
+    famost_person.insert("Tolstoy");
+    cout << famost_person.count("Tolstoy");
+    famost_person.erase("Lermontov");
+    return 0;
+}
+
+ВИДЕО: МНОЖЕСТВА ЧАСТЬ 2
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <set>
+using namespace std;
+
+void PrintSet(const set<string>& s){
+    cout << "Size = " << s.size()<< endl;
+    for(auto& x : s){
+        cout << x<< endl;
+    }
+}
+
+int main() {
+    set <string> month_name;
+    month_name = {"January", "March", "Desember", "March"};
+    set <string> month_name_ather;
+    month_name_ather = {"Desember","January", "March", "Desember", "March"};
+    cout << (month_name == month_name_ather)<< endl;
+    cout << month_name.count("January");
+    return 0;
+}
+
+
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <set>
+using namespace std;
+
+void PrintSet(const set<string>& s){
+    cout << "Size = " << s.size()<< endl;
+    for(auto& x : s){
+        cout << x<< endl;
+    }
+}
+
+int main() {
+    vector<string> v = {"a","b","a"};
+    set<string> s(begin(v), end(v));
+    PrintSet(s);
+
+    return 0;
+}
+
+Вывод: Size = 2
+a
+b

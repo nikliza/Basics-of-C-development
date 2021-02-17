@@ -1,0 +1,51 @@
+Видео: Функции min, max, sort
+
+#include<algorithm>
+
+min(a, b) - миниминальное из двух переменных
+max(a, b) - максимальное из двух переменных
+sort(begin(v),end(v)) - сортировка вектора
+
+Видео: Алгоритмы count и count_if, лямбда-функции
+count(begin(v),end(v), element) - считает количество вхождений элемента в вектор
+count_if(begin(v),end(v), function) - считает колличество элементов относительно функции
+(на сколько я поняла она должна возвращаться true ли false)
+
+пример лямбда-функции: 
+[ переменные из вне, которые нужны в функции ] ( внутренние переменные ) 
+{
+стейтменты;
+}
+
+Поля captureClause и параметры могут быть пустыми, если они не требуются программисту.
+
+#include <algorithm>
+#include <cstdlib>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    vector<int> srcVec;
+    for (int val = 0; val < 10; val++)
+    {
+        srcVec.push_back(val);
+    }
+
+    int result =
+            count_if(srcVec.begin(), srcVec.end(), [] (int _n)
+            {
+                return (_n % 2) == 0;
+            });
+
+    cout << result << endl;
+
+    return 0;
+}
+
+Видео: Модифицирующий range-based for
+for(auyo& item : vec){
+	// можно модифицировать элемент item из vec
+}

@@ -1,0 +1,75 @@
+ВИДЕО: КАК НАПИСАТЬ СТРУКТУРУ 
+
+Создадим структуру:
+
+struct Lecture{
+    string titel;
+    int duration;
+    string autor;
+};
+
+Напишем функция для вывода этой структуры:
+
+void PrintLecture (const Lecture& lecture){
+    cout << "titel" << lecture.titel << "duration" << lecture.duration << "autor" << lecture.autor;
+}
+
+Создадим элемент типа Lecture и заполним его поля (2 варианта заполнения):
+
+int main(){
+
+Lecture lecture1;
+lecture1.titel = "l1";
+lecture1.duration = 30;
+lecture1.autor = "autor1";
+
+Lecture lecture2 = {"l2", 45, "autor2"};
+
+    return 0;
+}
+
+Вложенные структуры:
+
+struct something{
+    Lecture lecture;
+    string seminar;
+};
+
+ВИДЕО: ЧТО ТАКОЕ КЛАСС
+
+class Rout{
+public:
+    string Getsource(){ return source;}
+    string Getdestination(){ return destination;}
+    int Getlenght(){ return lenght;}
+private:
+    string source;
+    string destination;
+    int lenght;
+};
+
+ВИДЕО: МЕТОДЫ
+
+class Rout{
+public:
+    void SetSource(const string& new_source){
+        source = new_source;
+        UpdateLanght()
+    }
+    void SetDestination(const string& new_destination){
+        destination = new_destination;
+        UpdateLanght();
+    }
+    void UpdateLanght(){
+
+    }
+    string Getsource(){ return source;}
+    string Getdestination(){ return destination;}
+    int Getlenght(){ return lenght;}
+private:
+    string source;
+    string destination;
+    int lenght;
+};
+
+
